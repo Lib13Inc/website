@@ -1,0 +1,5 @@
+User-agent: *
+Allow: /
+Disallow: /client-dashboard/
+
+Sitemap: https://www.lib13.com/sitemap.xml

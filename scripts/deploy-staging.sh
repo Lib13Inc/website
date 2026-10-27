@@ -14,6 +14,7 @@ rsync -a \
   "$ROOT/" "$OUT/"
 
 find "$OUT" -name '*.html' -exec sed -i '' 's#</head>#<meta name="robots" content="noindex, nofollow, noarchive"></head>#' {} +
+rm -f "$OUT/sitemap.xml"
 printf 'User-agent: *\nDisallow: /\n' > "$OUT/robots.txt"
 printf '/*\n  X-Robots-Tag: noindex, nofollow, noarchive\n' > "$OUT/_headers"
 
