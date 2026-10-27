@@ -95,7 +95,10 @@ color: #6CF6FB;
 }
 
 .subtitle-new{
-font-size: 24px;
+display: inline-block;
+max-width: 760px;
+line-height: 1.5;
+font-size: 20px;
 font-family: 'Inconsolata', monospace;
 	font-weight: 700;
 }
@@ -216,3 +219,10 @@ a.navbar-item:hover{
 	}*/
 }
 
+
+.service-icon{
+	display: block;
+	font-size: 48px;
+	color: #E74530;
+	margin-bottom: 10px;
+}
