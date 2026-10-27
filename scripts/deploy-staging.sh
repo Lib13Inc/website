@@ -1,6 +1,7 @@
 #!/usr/bin/env bash
 # Deploy the current checkout to staging.lib13.com (Cloudflare Pages project: lib13-staging).
-# noindex headers and robots.txt are injected into a temp copy so they never land in git.
+# noindex (meta tag, robots.txt, header) is injected into a temp copy so it never lands in git.
+# The meta tag is the host-agnostic part: it still works if staging moves to GitHub Pages.
 set -euo pipefail
 
 ROOT="$(cd "$(dirname "$0")/.." && pwd)"
@@ -12,6 +13,7 @@ rsync -a \
   --exclude '.gitignore' --exclude '.DS_Store' --exclude '.wrangler' \
   "$ROOT/" "$OUT/"
 
+find "$OUT" -name '*.html' -exec sed -i '' 's#</head>#<meta name="robots" content="noindex, nofollow, noarchive"></head>#' {} +
 printf 'User-agent: *\nDisallow: /\n' > "$OUT/robots.txt"
 printf '/*\n  X-Robots-Tag: noindex, nofollow, noarchive\n' > "$OUT/_headers"
 
