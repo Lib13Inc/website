@@ -227,44 +227,14 @@ a.navbar-item:hover{
 	margin-bottom: 10px;
 }
 
-.contact-form{
-	max-width: 560px;
-	margin: 24px auto 0;
-	text-align: left;
+.contact-cta{
+	margin-top: 24px;
 }
-.contact-form .label{
-	color: #fff;
-}
-.contact-form .input, .contact-form .textarea{
-	background: #1f1f29;
-	border-color: #4a4a5a;
-	color: #fff;
-}
-.contact-form .input:focus, .contact-form .textarea:focus{
-	border-color: #6CF6FB;
-}
-.contact-form a, .contact-note a{
-	color: #6CF6FB;
-}
-.contact-note{
-	font-size: 14px;
-	margin: 12px 0 16px;
-}
-.contact-hp{
-	position: absolute;
-	left: -9999px;
-}
-#contact-submit{
+#book-btn{
 	background: #E74530;
 	border-color: #E74530;
 	color: #fff;
 }
-.contact-status{
-	margin-top: 12px;
-}
-.contact-status.is-ok{ color: #72F3BA; }
-.contact-status.is-error{ color: #E74530; }
-
 .contact-fallback{
 	margin-top: 16px;
 }
