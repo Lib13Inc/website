@@ -1,9 +1,14 @@
 // Contact form: POSTs JSON to the endpoint in the form's data-endpoint attribute.
-// The endpoint is a separate service (not part of this static site), so the site
-// stays host-agnostic. Until data-endpoint is set the form says it is not connected.
+// The endpoint is a separate service (not part of this static site).
+// The form stays hidden, and the email fallback paragraph shows, until data-endpoint is set.
 (function () {
   var form = document.getElementById('contact-form');
   if (!form) return;
+  if (form.getAttribute('data-endpoint')) {
+    form.hidden = false;
+    var fallback = document.getElementById('contact-fallback');
+    if (fallback) fallback.hidden = true;
+  }
   var status = document.getElementById('contact-status');
   var button = form.querySelector('button[type="submit"]');
 

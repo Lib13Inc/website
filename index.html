@@ -237,7 +237,8 @@
    <div class="container">
   <h2>Discuss your security needs</h2>
        <div class="sub-space"><h4>Tell us what you're building and what worries you about its security. We'll reply within one business day with what we'd look at first.</h4></div>
-       <form id="contact-form" class="contact-form" data-endpoint="" novalidate>
+       <p id="contact-fallback" class="contact-fallback">Email us at <a href="mailto:info@lib13.com">info@lib13.com</a> and we'll reply within one business day. Please don't include passwords or sensitive data. See our <a href="/privacy/">Privacy Policy</a>.</p>
+       <form id="contact-form" class="contact-form" data-endpoint="" hidden novalidate>
          <div class="field"><label class="label" for="cf-name">Name</label><div class="control"><input class="input" id="cf-name" name="name" type="text" autocomplete="name" required></div></div>
          <div class="field"><label class="label" for="cf-email">Work email</label><div class="control"><input class="input" id="cf-email" name="email" type="email" autocomplete="email" required></div></div>
          <div class="field"><label class="label" for="cf-company">Company</label><div class="control"><input class="input" id="cf-company" name="company" type="text" autocomplete="organization"></div></div>

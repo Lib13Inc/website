@@ -264,3 +264,11 @@ a.navbar-item:hover{
 }
 .contact-status.is-ok{ color: #72F3BA; }
 .contact-status.is-error{ color: #E74530; }
+
+.contact-fallback{
+	margin-top: 16px;
+}
+.contact-fallback a{
+	color: #6CF6FB;
+	text-decoration: underline;
+}
