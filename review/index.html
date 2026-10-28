@@ -92,8 +92,8 @@ var SECTIONS = [
 ]},
 {id:'partners', title:'Partners and clients', lead:'All logos are in.', items:[
  {id:'p1', t:'Partners row', p:'Vanta, Anthropic (icon + name), Prowler, Sensiba.', b:'', w:''},
- {id:'p2', t:'Older logos', p:'Cyber Defenders, shape, youbase, IEEE, Sentant, shown under Partners.', b:'Keep all, or cut any?', w:''},
- {id:'p3', t:'Clients row', p:'Jasper, StarTree.', b:'', w:''}
+ {id:'p2', t:'Older logos (moved to Clients)', p:'Cyber Defenders, shape, youbase, IEEE, Sentant, now shown under Clients.', b:'Keep all, or cut any?', w:''},
+ {id:'p3', t:'Clients row', p:'Jasper, StarTree, plus the older logos.', b:'', w:''}
 ]},
 {id:'team', title:'Team (6 people)', lead:'', items:[
  {id:'t1', t:'Existing four', p:'Vaibhav Bhandari (Head Of Engineering), Varun Almaula (Head of Growth), Srikumar R (Head Scientist), Alison Depsky (Head of Design).', b:'', w:''},
@@ -108,7 +108,7 @@ var QUESTIONS = [
  {id:'q3', q:'Team: handles/LinkedIn links for Brian and Drew, and the updated subhead?'},
  {id:'q4', q:'Ready to commit and ship to production, or another round first?'}
 ];
-var KEY = 'lib13-review-v6', state = {};
+var KEY = 'lib13-review-v7', state = {};
 try { state = JSON.parse(localStorage.getItem(KEY) || '{}'); } catch (e) {}
 function save(){ try { localStorage.setItem(KEY, JSON.stringify(state)); } catch (e) {} }
 function el(tag, cls, html){ var n = document.createElement(tag); if (cls) n.className = cls; if (html != null) n.innerHTML = html; return n; }
