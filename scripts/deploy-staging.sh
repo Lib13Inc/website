@@ -10,7 +10,7 @@ trap 'rm -rf "$OUT"' EXIT
 
 rsync -a \
   --exclude '.git' --exclude 'scripts' --exclude 'CNAME' --exclude 'README.md' \
-  --exclude '.gitignore' --exclude '.DS_Store' --exclude '.wrangler' \
+  --exclude '.gitignore' --exclude '.DS_Store' --exclude '.wrangler' --exclude 'Makefile' \
   "$ROOT/" "$OUT/"
 
 find "$OUT" -name '*.html' -exec sed -i '' 's#</head>#<meta name="robots" content="noindex, nofollow, noarchive"></head>#' {} +

@@ -71,14 +71,20 @@
         <a class="navbar-item" href="#services">
         Services
       </a>
-          <a class="navbar-item" href="#about-1">
-        About
+       <a class="navbar-item" href="#products">
+        Products
+      </a>
+       <a class="navbar-item" href="#free">
+        Free Reviews
+      </a>
+          <a class="navbar-item" href="#partners">
+        Partners
       </a>
        <a class="navbar-item" href="#team-1">
         Team
       </a>
        <a class="navbar-item" href="#contact" style="color:#E74530;">
-        Free Review
+        Book a Call
       </a>
       </div>
     </div>
@@ -93,7 +99,7 @@
 <div class= "demo-1">
 
 
-<div id="large-header" class="large-header"> <canvas id="demo-canvas"></canvas><div class="main-title"><h1>Security that helps your <span class="thin-new">next deal move forward.</span></h1><br><span class="subtitle-new">SOC 2 readiness and implementation, HIPAA security programs, AI security reviews, and penetration testing for startups and growing tech teams. Hands-on help from planning through remediation and evidence collection.</span><br><a href="#contact" class="button is-medium is-rounded" id="top-btn">Discuss your security needs</a><br><img src="img/arrow.png" width="50px" class="animated bounce infinite" id="arrow"></div>  </div>
+<div id="large-header" class="large-header"> <canvas id="demo-canvas"></canvas><div class="main-title"><h1>Security that helps your <span class="thin-new">next deal move forward.</span></h1><br><span class="subtitle-new">Security that keeps your speed. We work with fast-moving engineering teams and keep communication short and direct. Security engineering, operations security, SOC 2 and HIPAA compliance from zero to one, AI security, pentesting, and cloud security, hands-on from planning through remediation.</span><br><a href="#contact" class="button is-medium is-rounded" id="top-btn">Discuss your security needs</a><br><img src="img/arrow.png" width="50px" class="animated bounce infinite" id="arrow"></div>  </div>
 
 </div>
 
@@ -104,77 +110,171 @@
   <section class="section">
     <div class="container has-text-centered">
           <h2>Services</h2>
-          <div class="sub-space"><h4>Hands-on security work for teams that need to close deals, pass reviews, and ship safely.</h4></div>
-<div class="columns is-multiline is-variable is-6 has-text-centered">
+          <div class="sub-space"><h4>Hands-on security for fast-moving teams that need to close deals, pass reviews, and ship safely.</h4></div>
+<div class="columns svc-grid svc-grid-2">
 
-  <div class="column is-one-third-desktop">
+  <div class="column is-half-desktop"><div class="svc-card">
     <i class="fas fa-file-alt service-icon" aria-hidden="true"></i>
-    <h3>SOC 2 readiness and implementation</h3>
-    <p>Get your controls and evidence ready for SOC 2. We help with scoping, gap assessments, policies, hands-on remediation, and evidence collection so your team can prepare for an independent CPA examination.</p>
+    <h3>Compliance (SOC 2, ISO 27001, HIPAA, etc.)</h3>
+    <p>50+ audit engagements with a clean record. We are a Vanta partner and have worked with many audit firms, from scoping to evidence.</p>
+    <button class="more-btn" data-detail="comp">Details</button></div>
   </div>
-  <div class="column is-one-third-desktop">
-    <i class="fas fa-heartbeat service-icon" aria-hidden="true"></i>
-    <h3>HIPAA security programs</h3>
-    <p>Assess risks, put practical safeguards in place, and build the policies and evidence your healthcare customers need.</p>
-  </div>
-  <div class="column is-one-third-desktop">
-    <i class="fas fa-bug service-icon" aria-hidden="true"></i>
-    <h3>Penetration testing</h3>
-    <p>Web, API, and cloud testing with a clear report your engineers can act on.</p>
-  </div>
-  <div class="column is-one-third-desktop is-offset-2-desktop">
+  <div class="column is-half-desktop"><div class="svc-card">
     <i class="fas fa-microchip service-icon" aria-hidden="true"></i>
     <h3>AI security</h3>
-    <p>Threat modeling, prompt-injection and data-leak testing, and agentic code review for LLM products.</p>
+    <p>ChatGPT and Claude are in daily use with no policy, no guardrails, and no visibility into what data goes where. We help secure the AI stack with containment, observability, and clear policy. See <a href="https://kavach.lib13.com" target="_blank" rel="noopener">Kavach</a>, our open-source tooling for containing AI agents.</p>
+    <button class="more-btn" data-detail="aisec">Details</button></div>
   </div>
-  <div class="column is-one-third-desktop">
+  <div class="column is-half-desktop"><div class="svc-card">
+    <i class="fas fa-bug service-icon" aria-hidden="true"></i>
+    <h3>Penetration testing</h3>
+    <p>Expert-led pentests across application, infrastructure, network, cloud, mobile, and AI. Done by certified engineers (OSCP, CISSP, and more), not automated scans, so you get validated findings with fewer false positives and a high return on your testing spend.</p>
+    <button class="more-btn" data-detail="pen">Details</button></div>
+  </div>
+  <div class="column is-half-desktop"><div class="svc-card">
     <i class="fas fa-cloud service-icon" aria-hidden="true"></i>
-    <h3>Product and cloud security</h3>
-    <p>Secure design reviews and cloud hardening.</p>
+    <h3>Cloud security</h3>
+    <p>We are a Prowler partner and have hardened deployments in all the major public clouds.</p>
+    <button class="more-btn" data-detail="cloud">Details</button></div>
   </div>
 
 </div>
 
+<h3 class="more-title">Also</h3>
+<div class="columns svc-grid svc-grid-4">
+  <div class="column"><div class="svc-card">
+    <h3>Vulnerability management</h3>
+    <p>Get your Snyk and other tooling up to par for a world where code ships faster than ever.</p>
+    <button class="more-btn" data-detail="vm">Details</button></div>
+  </div>
+  <div class="column"><div class="svc-card">
+    <h3>Intrusion detection and response</h3>
+    <p>Logging, alerting, detection rules, and a response plan you have actually rehearsed.</p>
+    <button class="more-btn" data-detail="ids">Details</button></div>
+  </div>
+  <div class="column"><div class="svc-card">
+    <h3>Operational security</h3>
+    <p>MDM rollouts with Iru and Jamf, access reviews, and a security lead without the full-time hire.</p>
+    <button class="more-btn" data-detail="ops">Details</button></div>
+  </div>
+  <div class="column"><div class="svc-card">
+    <h3>Secure software engineering training</h3>
+    <p>SSDLC and secure AI development lifecycle training, plus tabletop exercises, for your engineers and leaders.</p>
+    <button class="more-btn" data-detail="train">Details</button></div>
+  </div>
+</div>
+
     </div>
   </section>
-<a name="about-1"> </a>
-    <section class="section wow">
-    <div class="container">
-<div class="columns is-variable is-8">
-  <div class="column">
-    <h2 style="text-align:left; padding-top:100px;">Products</h2>
-  <p style="text-align:left;">We make it easy for organizations to adopt and operationalize cyber security best practices.</p> 
-  </div>
-   <div class="column" id="center-one">
-    <div class="wow bounceInRight"><div id="div3"><img src="img/huh.png" ></div></div>
-  </div>
-  </div>
+
+<section class="section">
+  <div class="container has-text-centered">
+    <h2>How we make a difference</h2>
+    <div class="columns is-variable is-6 has-text-centered">
+      <div class="column"><h3>We keep your speed</h3><p>We fit into how your engineers already work, so security does not become the reason a release slips.</p></div>
+      <div class="column"><h3>Direct communication</h3><p>You talk to the people doing the work. Short updates, clear priorities, no 80-page decks.</p></div>
+      <div class="column"><h3>Hands-on through the fix</h3><p>We do not stop at the report. We help remediate, retest, and collect the evidence.</p></div>
     </div>
-  </section>
+  </div>
+</section>
 
+<a name="free"></a>
+<section class="section">
+  <div class="container has-text-centered">
+    <h2>Free security reviews</h2>
+    <div class="sub-space"><h4>Four ways to see where you stand, at no cost.</h4></div>
+    <div class="columns is-multiline is-variable is-6 has-text-centered">
+      <div class="column is-half-desktop"><h3>Attack surface review</h3><p>Give us your domain. We map exposed hosts and services, expired certificates, risky DNS, and leaked credentials, and send a one-page report with the first fixes.</p><p class="contact-cta"><a class="button is-rounded" href="mailto:info@lib13.com?subject=Free%20attack%20surface%20review">Request it</a></p></div>
+      <div class="column is-half-desktop"><h3>Email authentication check</h3><p>SPF, DKIM, and DMARC reviewed, with the exact record changes to stop spoofing.</p><p class="contact-cta"><a class="button is-rounded" href="mailto:info@lib13.com?subject=Free%20email%20authentication%20check">Request it</a></p></div>
+      <div class="column is-half-desktop"><h3>SOC 2 and HIPAA readiness scorecard</h3><p>A short questionnaire. You get your likely gaps and a rough timeline. An estimate, not an audit.</p><p class="contact-cta"><a class="button is-rounded" href="mailto:info@lib13.com?subject=SOC%202%2FHIPAA%20readiness%20scorecard">Request it</a></p></div>
+      <div class="column is-half-desktop"><h3>AI security quick check</h3><p>30 minutes on your AI product. We name your top three risks and send a short written summary.</p><p class="contact-cta"><a class="button is-rounded" href="mailto:info@lib13.com?subject=Free%20AI%20security%20quick%20check">Request it</a></p></div>
+    </div>
+  </div>
+</section>
 
+<section class="section">
+  <div class="container has-text-centered">
+    <h2>For investors</h2>
+    <div class="sub-space"><h4>Security diligence and support for your portfolio.</h4></div>
+    <p>One baseline for every portfolio company: an attack surface review, SOC 2 readiness help, and fast answers when a customer sends a security questionnaire. Bundled per-company pricing.</p>
+      </div>
+</section>
+<a name="products"></a>
+<section class="section">
+  <div class="container has-text-centered">
+    <h2>Products</h2>
+    <div class="sub-space"><h4>Tools we build and use in our own engagements.</h4></div>
+    <div class="rotator" id="product-rotator" aria-roledescription="carousel" aria-label="Lib13 products">
+      <div class="rot-slides">
+        <article class="rot-slide is-active" aria-label="1 of 3">
+          <span class="rot-tag">Open source</span>
+          <h3>Kavach</h3>
+          <p>Containment for AI agents. The agent only ever sees tokens and stand-in keys, a gateway enforces an allowlist and swaps in real secrets only where allowed, and every request is traced.</p>
+          <p class="rot-links"><a class="button is-rounded" href="https://kavach.lib13.com" target="_blank" rel="noopener">Visit Kavach</a> <a class="rot-link" href="https://github.com/Lib13Inc/kavach" target="_blank" rel="noopener">View on GitHub</a></p>
+        </article>
+        <article class="rot-slide" aria-label="2 of 3">
+          <span class="rot-tag">Product</span>
+          <h3>Attack Surface Management</h3>
+          <p>See what you expose to the internet: hosts and services, certificates, DNS, and leaked credentials. Continuous monitoring behind the free attack surface review.</p>
+          <p class="rot-links"><a class="button is-rounded" href="mailto:info@lib13.com?subject=Attack%20Surface%20Management">Ask about it</a></p>
+        </article>
+        <article class="rot-slide" aria-label="3 of 3">
+          <span class="rot-tag">Product</span>
+          <h3>AI Pentesting Agent</h3>
+          <p>AI agents that test applications, infrastructure, and mobile for breadth, with our engineers validating every finding before you see it.</p>
+          <p class="rot-links"><a class="button is-rounded" href="mailto:info@lib13.com?subject=AI%20Pentesting%20Agent">Ask about it</a></p>
+        </article>
+      </div>
+      <div class="rot-controls">
+        <button class="rot-arrow" id="rot-prev" aria-label="Previous product">&#8249;</button>
+        <span class="rot-dots" id="rot-dots"></span>
+        <button class="rot-arrow" id="rot-next" aria-label="Next product">&#8250;</button>
+      </div>
+    </div>
+  </div>
+</section>
+<script>
+(function(){
+  var root=document.getElementById('product-rotator'); if(!root) return;
+  var slides=root.querySelectorAll('.rot-slide'), dots=document.getElementById('rot-dots'), i=0, timer=null;
+  var reduce=window.matchMedia && matchMedia('(prefers-reduced-motion: reduce)').matches;
+  slides.forEach(function(_,n){var b=document.createElement('button');b.className='rot-dot';b.setAttribute('aria-label','Show product '+(n+1));b.onclick=function(){go(n);};dots.appendChild(b);});
+  function go(n){i=(n+slides.length)%slides.length;slides.forEach(function(s,k){s.classList.toggle('is-active',k===i);});[].forEach.call(dots.children,function(d,k){d.classList.toggle('on',k===i);});}
+  function start(){if(reduce||timer)return;timer=setInterval(function(){go(i+1);},7000);}
+  function stop(){clearInterval(timer);timer=null;}
+  document.getElementById('rot-prev').onclick=function(){go(i-1);};
+  document.getElementById('rot-next').onclick=function(){go(i+1);};
+  root.addEventListener('mouseenter',stop);root.addEventListener('mouseleave',start);
+  root.addEventListener('focusin',stop);root.addEventListener('focusout',start);
+  go(0);start();
+})();
+</script>
 
-    <a name="partners"> </a>
+<a name="partners"> </a>
 <section class="section">
    <div class="container">
   <h2>Partners</h2>
        <div class="sub-space"><h4>We work with the best.</h4></div>
+       <div class="columns is-multiline is-variable is-4 has-text-centered partner-chips">
+  <div class="column"><span class="chip logo-chip"><img src="img/partners/vanta.svg" alt="Vanta"></span></div>
+  <div class="column"><span class="chip logo-chip logo-light logo-icon"><img src="img/partners/anthropic.png" alt=""><span>Anthropic</span></span></div>
+  <div class="column"><span class="chip logo-chip logo-light"><img src="img/partners/prowler.png" alt="Prowler"></span></div>
+  <div class="column"><span class="chip logo-chip"><img src="img/partners/sensiba.png" alt="Sensiba"></span></div>
+       </div>
        <div class="columns">
-  <div class="column"><img src="img/cyber.png"></div>
-   <div class="column"><img src="img/shape.png"></div>
-    <div class="column"><img src="img/youbase.png"></div>
-    <div class="column"><img src="img/ieee-logo.png"></div>
-    <div class="column"><img src="img/sentant-logo.png"></div>
+  <div class="column"><img src="img/cyber.png" alt=""></div>
+   <div class="column"><img src="img/shape.png" alt=""></div>
+    <div class="column"><img src="img/youbase.png" alt=""></div>
+    <div class="column"><img src="img/ieee-logo.png" alt="IEEE"></div>
+    <div class="column"><img src="img/sentant-logo.png" alt="Sentant"></div>
 </div>
+       <h3 class="more-title">Clients</h3>
+       <div class="columns is-multiline is-variable is-4 has-text-centered partner-chips">
+  <div class="column"><span class="chip logo-chip"><img src="img/partners/jasper.png" alt="Jasper Health"></span></div>
+  <div class="column"><span class="chip logo-chip"><img src="img/partners/startree.svg" alt="StarTree"></span></div>
+       </div>
           </div>
 </section>
-
-
-
-
-
-
-
 
 <a name="team-1"> </a>
    <section class="section">
@@ -182,49 +282,42 @@
       <h2>Team</h2>
      <div class="sub-space"><h4> We are a proven team of engineers and researchers with previous experience at Microsoft, INRIA, Mitsubishi and Y-Combinator.</h4></div>
       <br>
-<div class="columns">
-  <div class="column">
-    <img src="img/0.jpeg" id="team" style="border: 5px solid #6CF6FB;  box-shadow: 0px 0px 30px rgba(108, 246, 251, 0.2);">
- <h3>Vaibhav Bhandari</h3>
- <h5>Head Of Engineering</h5>
-	  <H3><a target="_blank" href="https://twitter.com/vaibhavb"><i class="fab fa-twitter-square"></i></a></H3>
-
-
+<div class="columns is-multiline">
+  <div class="column is-one-third-desktop">
+    <img src="img/0.jpeg" alt="Vaibhav Bhandari" id="team" style="border: 5px solid #6CF6FB; box-shadow: 0px 0px 30px rgba(108, 246, 251, 0.2);">
+    <h3>Vaibhav Bhandari</h3>
+    <h5>Head Of Engineering</h5>
+    <h3><a target="_blank" href="https://twitter.com/vaibhavb"><i class="fab fa-twitter-square"></i></a></h3>
   </div>
-  <div class="column">
-     <img src="img/varun.jpg" id="team" style="border: 5px solid #72F3BA; box-shadow: 0px 0px 30px rgba(114, 243, 186, 0.2);">
- <h3> Varun Almaula</h3>
-  <h5>Head of Growth</h5>
-	  <H3><a target="_blank" href="https://twitter.com/varun_almaula"><i class="fab fa-twitter-square"></i></a></H3>
-
-
+  <div class="column is-one-third-desktop">
+    <img src="img/varun.jpg" alt="Varun Almaula" id="team" style="border: 5px solid #72F3BA; box-shadow: 0px 0px 30px rgba(114, 243, 186, 0.2);">
+    <h3>Varun Almaula</h3>
+    <h5>Head of Growth</h5>
+    <h3><a target="_blank" href="https://twitter.com/varun_almaula"><i class="fab fa-twitter-square"></i></a></h3>
   </div>
-  <div class="column">
-     <img src="img/1.jpg" id="team" style="border: 5px solid #E74530; box-shadow: 0px 0px 30px rgba(231, 69, 48, 0.2);">
- <h3>Srikumar R</h3>
-  <h5>Head Scientist</h5>
-	  <H3><a target="_blank" href="https://twitter.com/"><i class="fab fa-twitter-square"></i></a></H3>
-
-
-
-
-
-
+  <div class="column is-one-third-desktop">
+    <img src="img/1.jpg" alt="Srikumar R" id="team" style="border: 5px solid #E74530; box-shadow: 0px 0px 30px rgba(231, 69, 48, 0.2);">
+    <h3>Srikumar R</h3>
+    <h5>Head Scientist</h5>
+    <h3><a target="_blank" href="https://twitter.com/"><i class="fab fa-twitter-square"></i></a></h3>
+  </div>
+  <div class="column is-one-third-desktop">
+    <img src="img/ali.png" alt="Alison Depsky" id="team" style="border: 5px solid #6CF6FB; box-shadow: 0px 0px 30px rgba(108, 246, 251, 0.2);">
+    <h3>Alison Depsky</h3>
+    <h5>Head of Design</h5>
+    <h3><a target="_blank" href="https://twitter.com/alidepsky"><i class="fab fa-twitter-square"></i></a></h3>
+  </div>
+  <div class="column is-one-third-desktop">
+    <img src="img/brian.png" alt="Brian Koref" id="team" style="border: 5px solid #72F3BA; box-shadow: 0px 0px 30px rgba(114, 243, 186, 0.2);">
+    <h3>Brian Koref</h3>
+    <h5>Risk Management</h5>
+  </div>
+  <div class="column is-one-third-desktop">
+    <img src="img/drew.png" alt="Drew Gipson" id="team" style="border: 5px solid #E74530; box-shadow: 0px 0px 30px rgba(231, 69, 48, 0.2);">
+    <h3>Drew Gipson</h3>
+    <h5>Cloud Automation</h5>
+  </div>
 </div>
-	
-	  <div class="column">
-     <img src="img/ali.png" id="team" style="border: 5px solid #6CF6FB;  box-shadow: 0px 0px 30px rgba(108, 246, 251, 0.2);">
- <h3>Alison Depsky</h3>
-  <h5>Head of Design</h5>
-<H3><a target="_blank" href="https://twitter.com/alidepsky"><i class="fab fa-twitter-square"></i></a></H3>
-
-
-
-
-
-
-</div>
-
     </div>
   </section>
 
@@ -262,7 +355,44 @@
 
 
 
-		<script src="js/TweenLite.min.js"></script>
+		
+<div id="detail-modal" class="detail-modal" hidden>
+  <div class="detail-box" role="dialog" aria-modal="true" aria-labelledby="detail-title">
+    <button class="detail-close" aria-label="Close">&times;</button>
+    <h3 id="detail-title"></h3>
+    <div id="detail-body"></div>
+    <p class="contact-cta"><a class="button is-rounded" href="#contact" id="detail-cta">Discuss this</a></p>
+  </div>
+</div>
+<script>
+(function(){
+  var D = {
+    comp:{t:'Compliance (SOC 2, ISO 27001, HIPAA, etc.)',b:['Scoping, gap assessment, policies, hands-on remediation, and evidence collection.','Vanta partner. We also work with Drata and other platforms, and with many audit firms across SOC 2, ISO 27001, and HIPAA.','Lib13 is not a CPA firm. An independent CPA performs the SOC 2 examination, and we do not guarantee outcomes.']},
+    aisec:{t:'AI security',b:['Policy and approved-tools guidance for the AI your team already uses.','Visibility into what data goes where, with containment and guardrails.','Threat modeling and testing for your own AI features: prompt injection, data leakage, and agent or tool abuse.','Kavach is our open-source tooling (Apache-2.0) for containing AI agents: the agent only ever sees tokens and stand-in keys, a gateway enforces an allowlist, and every request is traced. github.com/Lib13Inc/kavach']},
+    pen:{t:'Penetration testing',b:['Application: web apps, APIs, and authentication flows.','Infrastructure and network: external and internal environments.','Cloud: AWS, Google Cloud, and Azure accounts, identity paths, and containers.','Mobile: iOS and Android apps and their backends.','AI pentesting: prompt injection, data leakage, and agent or tool abuse in your AI features.','Done by certified experts (OSCP, CISSP, and more). Tools help; people do the testing and validate every finding, so you have fewer false positives to chase. We retest fixes and test only with written authorization.']},
+    cloud:{t:'Cloud security',b:['Prowler partner. Configuration review across AWS, Google Cloud, and Azure.','Identity and access cleanup, secrets management, and infrastructure-as-code guardrails.','Hardened deployments in all the major public clouds.']},
+    vm:{t:'Vulnerability management',b:['Implement and tune Snyk and your other scanners across code, dependencies, containers, and cloud.','Triage so the fixes that matter come first, with remediation tracked alongside your engineers.','Monthly reporting that shows findings closed, not findings counted.']},
+    ids:{t:'Intrusion detection and response',b:['Logging and alerting design and detection rules.','An incident response runbook and tabletop exercises.','We are not a 24/7 SOC.']},
+    train:{t:'Secure software engineering training',b:['Secure SDLC training: threat modeling, secure code review, dependency and secrets hygiene, and building security checks into CI.','Secure AI development lifecycle training: prompt injection, agent permissions and data handling, and evaluating and red-teaming AI features before release.','Tabletop exercises for engineers and leaders: incident response, breach scenarios, and AI incidents.','Tailored to your stack and team, with hands-on labs using your own code where possible.']},
+    ops:{t:'Operational security',b:['MDM deployments with Iru and Jamf.','Access reviews, onboarding and offboarding hygiene, and customer security questionnaires.','Fractional CISO and security updates for your board or investors.']}
+  };
+  var m=document.getElementById('detail-modal'),t=document.getElementById('detail-title'),b=document.getElementById('detail-body');
+  function close(){m.hidden=true;document.body.style.overflow='';}
+  document.querySelectorAll('.more-btn').forEach(function(btn){
+    btn.addEventListener('click',function(){
+      var d=D[btn.getAttribute('data-detail')];
+      t.textContent=d.t;
+      b.innerHTML='';
+      d.b.forEach(function(x){var p=document.createElement('p');p.textContent=x;b.appendChild(p);});
+      m.hidden=false;document.body.style.overflow='hidden';
+    });
+  });
+  m.addEventListener('click',function(e){if(e.target===m||e.target.className==='detail-close'||e.target.id==='detail-cta')close();});
+  document.addEventListener('keydown',function(e){if(e.key==='Escape')close();});
+})();
+</script>
+
+<script src="js/TweenLite.min.js"></script>
 		<script src="js/EasePack.min.js"></script>
 		<script src="js/rAF.js"></script>
 		<script src="js/demo-2.js"></script>
