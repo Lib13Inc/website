@@ -56,6 +56,8 @@ h4{
 
 #arrow{
 	margin-top: 100px;
+	width: 50px;
+	height: auto;
 }
 
 .sub-space{
@@ -140,7 +142,7 @@ font-weight: 700;}
     width: 70%;
 }
 
-#team {
+.team-photo {
 	border-radius: 50%;
 	border:5px solid #fff;
 	  display: block;
@@ -529,4 +531,131 @@ a.navbar-item:hover{
 	height: 28px;
 	width: 28px;
 	border-radius: 50%;
+}
+
+/* Accessibility and motion */
+a:focus-visible, button:focus-visible{
+	outline: 2px solid #6CF6FB;
+	outline-offset: 2px;
+}
+@media (prefers-reduced-motion: reduce){
+	*, *::before, *::after{
+		animation: none !important;
+		transition: none !important;
+		scroll-behavior: auto !important;
+	}
+}
+
+/* Navigation */
+.navbar-burger{
+	color: #fff;
+}
+.navbar-burger:hover{
+	background: transparent;
+}
+.navbar-menu.is-active{
+	box-shadow: none;
+	border-top: 1px solid #454556;
+}
+.navbar-item.nav-cta{
+	color: #E74530;
+}
+
+/* Persistent Book a call button */
+.sticky-cta{
+	position: fixed;
+	right: 16px;
+	bottom: 16px;
+	z-index: 40;
+	background: #E74530;
+	color: #fff;
+	font-family: 'Inconsolata', monospace;
+	font-weight: 700;
+	font-size: 18px;
+	padding: 12px 22px;
+	border-radius: 999px;
+	box-shadow: 0 4px 16px rgba(0,0,0,.4);
+	opacity: 0;
+	visibility: hidden;
+	transform: translateY(12px);
+	transition: opacity .25s ease, transform .25s ease, visibility .25s;
+}
+.sticky-cta:hover{
+	color: #fff;
+	background: #cf3a27;
+}
+.sticky-cta.is-visible{
+	opacity: 1;
+	visibility: visible;
+	transform: none;
+}
+@media only screen and (max-width: 768px){
+	.sticky-cta{
+		left: 16px;
+		text-align: center;
+	}
+}
+
+/* Inline icons (replaced the Font Awesome script) */
+svg.service-icon{
+	width: 1em;
+	height: 1em;
+}
+svg.social-icon{
+	width: 1em;
+	height: 1em;
+	vertical-align: -0.125em;
+}
+
+/* Section subtitle (was an h4, which skipped a heading level) */
+.sub-h{
+	font-family: 'Inconsolata', monospace;
+	font-size: 21px;
+	font-weight: 700;
+	line-height: 1.6;
+	margin: 10px;
+	padding-bottom: 50px;
+}
+
+/* Links inside body text are underlined, not just colored */
+p a:not(.button):not(.rot-link){
+	text-decoration: underline;
+}
+
+/* Rotator dots: 24px touch target around a 10px dot */
+.rot-dot{
+	width: 24px;
+	height: 24px;
+	border: none;
+	background: none;
+	position: relative;
+}
+.rot-dot::before{
+	content: '';
+	position: absolute;
+	top: 7px;
+	left: 7px;
+	width: 10px;
+	height: 10px;
+	border-radius: 50%;
+	border: 1px solid #6CF6FB;
+}
+.rot-dot.on::before{
+	background: #6CF6FB;
+}
+
+/* Skip link */
+.skip-link{
+	position: fixed;
+	top: -60px;
+	left: 8px;
+	z-index: 200;
+	background: #6CF6FB;
+	color: #212E37;
+	padding: 8px 14px;
+	border-radius: 6px;
+	font-weight: 700;
+}
+.skip-link:focus{
+	top: 8px;
 }

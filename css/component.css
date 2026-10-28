@@ -19,6 +19,7 @@
 	position: relative;
 	width: 100%;
 	background: #292935;
+	height: 100vh;
 	overflow: hidden;
 	background-size: cover;
 	background-position: center center;
@@ -26,7 +27,7 @@
 }
 
 .demo-1 .large-header {
-	background-image: url('../img/bg4.png');
+	background-image: url('../img/bg4.jpg');
 
 }
 
@@ -37,10 +38,10 @@
 	padding: 0;
 	color: #fff;
 text-align: center;
-	top: 60%;
+	top: 40%;
 	left: 50%;
-	-webkit-transform: translate3d(-50%,-50%,0);
-	transform: translate3d(-50%,-50%,0);
+	-webkit-transform: translate3d(-50%,0,0);
+	transform: translate3d(-50%,0,0);
 }
 .main-title h1{
 	text-transform: uppercase;

@@ -16,7 +16,7 @@ rsync -a \
 find "$OUT" -name '*.html' -exec sed -i '' 's#</head>#<meta name="robots" content="noindex, nofollow, noarchive"></head>#' {} +
 rm -f "$OUT/sitemap.xml"
 printf 'User-agent: *\nDisallow: /\n' > "$OUT/robots.txt"
-printf '/*\n  X-Robots-Tag: noindex, nofollow, noarchive\n' > "$OUT/_headers"
+awk '{print} /^\/\*$/ && !done {print "  X-Robots-Tag: noindex, nofollow, noarchive"; done=1}' "$ROOT/_headers" > "$OUT/_headers"
 
 wrangler pages deploy "$OUT" --project-name lib13-staging --branch staging \
   --commit-message "$(git -C "$ROOT" log -1 --pretty=%s)" --commit-dirty=true

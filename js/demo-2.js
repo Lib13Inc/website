@@ -1,92 +1,86 @@
-(function() {
+/* Hero particle canvas. Pauses off-screen and when the tab is hidden; draws one still frame
+   when the visitor prefers reduced motion. */
+(function () {
+  var canvas = document.getElementById('demo-canvas');
+  var header = document.getElementById('large-header');
+  if (!canvas || !header) return;
 
-    var width, height, largeHeader, canvas, ctx, circles, target, animateHeader = true;
+  var ctx = canvas.getContext('2d');
+  var reduce = window.matchMedia && matchMedia('(prefers-reduced-motion: reduce)').matches;
+  var width, height, circles = [], running = false, onScreen = true;
 
-    // Main
-    initHeader();
-    addListeners();
+  function size() {
+    width = window.innerWidth;
+    height = window.innerHeight;
+    header.style.height = height + 'px';
+    canvas.width = width;
+    canvas.height = height;
+  }
 
-    function initHeader() {
-        width = window.innerWidth;
-        height = window.innerHeight;
-        target = {x: 0, y: height};
+  function Circle(spread) {
+    this.reset(spread);
+  }
+  Circle.prototype.reset = function (spread) {
+    this.x = Math.random() * width;
+    this.y = spread ? Math.random() * height : height + Math.random() * 100;
+    this.alpha = 0.1 + Math.random() * 0.3;
+    this.scale = 0.1 + Math.random() * 0.3;
+    this.velocity = Math.random();
+  };
+  Circle.prototype.draw = function () {
+    if (this.alpha <= 0) this.reset(false);
+    this.y -= this.velocity;
+    this.alpha -= 0.0005;
+    ctx.beginPath();
+    ctx.arc(this.x, this.y, this.scale * 10, 0, 2 * Math.PI, false);
+    ctx.fillStyle = 'rgba(255,255,255,' + this.alpha + ')';
+    ctx.fill();
+  };
 
-        largeHeader = document.getElementById('large-header');
-        largeHeader.style.height = height+'px';
+  function populate() {
+    circles = [];
+    var count = Math.min(Math.round(width * 0.25), 200);
+    for (var i = 0; i < count; i++) circles.push(new Circle(reduce));
+  }
 
-        canvas = document.getElementById('demo-canvas');
-        canvas.width = width;
-        canvas.height = height;
-        ctx = canvas.getContext('2d');
+  function paint() {
+    ctx.clearRect(0, 0, width, height);
+    for (var i = 0; i < circles.length; i++) circles[i].draw();
+  }
 
-        // create particles
-        circles = [];
-        for(var x = 0; x < width*0.5; x++) {
-            var c = new Circle();
-            circles.push(c);
-        }
-        animate();
-    }
+  function frame() {
+    if (!running) return;
+    paint();
+    requestAnimationFrame(frame);
+  }
 
-    // Event handling
-    function addListeners() {
-        window.addEventListener('scroll', scrollCheck);
-        window.addEventListener('resize', resize);
-    }
+  function start() {
+    if (running || reduce || !onScreen || document.hidden) return;
+    running = true;
+    requestAnimationFrame(frame);
+  }
 
-    function scrollCheck() {
-        if(document.body.scrollTop > height) animateHeader = false;
-        else animateHeader = true;
-    }
+  function stop() {
+    running = false;
+  }
 
-    function resize() {
-        width = window.innerWidth;
-        height = window.innerHeight;
-        largeHeader.style.height = height+'px';
-        canvas.width = width;
-        canvas.height = height;
-    }
+  size();
+  populate();
+  if (reduce) paint();
+  else start();
 
-    function animate() {
-        if(animateHeader) {
-            ctx.clearRect(0,0,width,height);
-            for(var i in circles) {
-                circles[i].draw();
-            }
-        }
-        requestAnimationFrame(animate);
-    }
-
-    // Canvas manipulation
-    function Circle() {
-        var _this = this;
-
-        // constructor
-        (function() {
-            _this.pos = {};
-            init();
-            console.log(_this);
-        })();
-
-        function init() {
-            _this.pos.x = Math.random()*width;
-            _this.pos.y = height+Math.random()*100;
-            _this.alpha = 0.1+Math.random()*0.3;
-            _this.scale = 0.1+Math.random()*0.3;
-            _this.velocity = Math.random();
-        }
-
-        this.draw = function() {
-            if(_this.alpha <= 0) {
-                init();
-            }
-            _this.pos.y -= _this.velocity;
-            _this.alpha -= 0.0005;
-            ctx.beginPath();
-            ctx.arc(_this.pos.x, _this.pos.y, _this.scale*10, 0, 2 * Math.PI, false);
-            ctx.fillStyle = 'rgba(255,255,255,'+ _this.alpha+')';
-            ctx.fill();
-        };
-    }
-
+  window.addEventListener('resize', function () {
+    size();
+    populate();
+    if (reduce) paint();
+  });
+  document.addEventListener('visibilitychange', function () {
+    if (document.hidden) stop(); else start();
+  });
+  if ('IntersectionObserver' in window) {
+    new IntersectionObserver(function (entries) {
+      onScreen = entries[0].isIntersecting;
+      if (onScreen) start(); else stop();
+    }).observe(header);
+  }
 })();
