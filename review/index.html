@@ -57,35 +57,36 @@ textarea{width:100%;margin-top:10px;min-height:56px;resize:vertical;background:v
 <script>
 var SECTIONS = [
 {id:'hero', title:'Hero', lead:'Headline unchanged.', items:[
- {id:'h2', t:'Subhead', p:'Security that keeps your speed.', b:'We work with fast-moving engineering teams and keep communication short and direct. Security engineering, operations security, SOC 2 and HIPAA compliance from zero to one, AI security, pentesting, and cloud security, hands-on from planning through remediation.', w:''}
+ {id:'h2', t:'Subhead', p:'Security that keeps your speed.', b:'We find what matters, fix it with your engineers, and prove it\'s fixed, from SOC 2 to AI agents to production cloud.', w:''}
 ]},
 {id:'svc', title:'Services: 4 headliners', lead:'Each has a Details pop-up on the site.', items:[
- {id:'s-comp', t:'Compliance (SOC 2, ISO 27001, HIPAA, etc.)', p:'50+ audit engagements with a clean record.', b:'We are a Vanta partner and have worked with many audit firms, from scoping to evidence. Confirm our audit experience covers ISO 27001 as well.', w:''},
- {id:'s-aisec', t:'AI security', p:'ChatGPT and Claude are in daily use with no policy, no guardrails, and no visibility into what data goes where.', b:'We help secure the AI stack with containment, observability, and clear policy. See Kavach, our open-source tooling for containing AI agents.', w:''},
- {id:'s-pen', t:'Penetration testing', p:'Expert-led pentests across application, infrastructure, network, cloud, mobile, and AI. Done by certified engineers (OSCP, CISSP, and more), not automated scans, so you get validated findings with fewer false positives and a high return on your testing spend.', b:'Details list: application, infrastructure and network, cloud, mobile, AI pentesting. Confirm which certifications we can name, and that they are held by the people doing the work. The Products slide for the AI Pentesting Agent is unchanged.', w:''},
+ {id:'s-comp', t:'Compliance (SOC 2, ISO 27001, HIPAA, etc.)', p:'50+ audit engagements with a clean record.', b:'We are a Vanta partner and have worked with many audit firms, from scoping to evidence, so security reviews stop slowing your AI and enterprise deals. Confirm our audit experience covers ISO 27001 as well.', w:''},
+ {id:'s-aisec', t:'AI and agent security', p:'AI tools and agents are in daily use with no policy, no guardrails, and no visibility into what they can reach.', b:'We inventory your agents and MCP servers, scope their access, and set rules for when they can act on their own. We also help secure the AI stack with containment, observability, and clear policy. See Kavach, our open-source tooling for containing AI agents.', w:''},
+ {id:'s-pen', t:'Penetration testing and validation', p:'Expert-led pentests across application, infrastructure, network, cloud, mobile, and AI. Done by certified engineers (OSCP, CISSP, and more), not automated scans, so you get validated findings with fewer false positives, fix guidance, and up to three free retests.', b:'Details list: application, infrastructure and network, cloud, mobile, AI pentesting. Confirm which certifications we can name, and that they are held by the people doing the work. The Products slide for the AI Pentesting Agent is unchanged.', w:''},
  {id:'s-cloud', t:'Cloud security', p:'We are a Prowler partner and have hardened deployments in all the major public clouds.', b:'', w:''}
 ]},
 {id:'also', title:'Services: Also row (4 cards)', lead:'', items:[
- {id:'s-vm', t:'Vulnerability management', p:'Get your Snyk and other tooling up to par for a world where code ships faster than ever.', b:'', w:''},
- {id:'s-ids', t:'Intrusion detection and response', p:'Logging, alerting, detection rules, and a response plan you have actually rehearsed.', b:'', w:''},
+ {id:'s-vm', t:'Exposure and vulnerability management', p:'Get your Snyk and other tooling up to par, then prioritize by exploitability and track every fix to done.', b:'', w:''},
+ {id:'s-ids', t:'Intrusion detection and AI SOC', p:'Logging, alerting, detection rules, AI-assisted triage, and a response plan you have actually rehearsed.', b:'', w:''},
  {id:'s-ops', t:'Operational security', p:'MDM rollouts with Iru and Jamf, access reviews, and a security lead without the full-time hire.', b:'', w:''},
- {id:'s-train', t:'Secure software engineering training (NEW)', p:'SSDLC and secure AI development lifecycle training, plus tabletop exercises, for your engineers and leaders.', b:'Details: secure SDLC (threat modeling, code review, dependency and secrets hygiene, CI checks), secure AI development lifecycle (prompt injection, agent permissions, data handling, evals and red-teaming), tabletop exercises (incident response, breaches, AI incidents), tailored to your stack with hands-on labs.', w:''}
+ {id:'s-train', t:'Secure AI-assisted development (NEW)', p:'SSDLC training, reviewing AI-generated code and dependencies, and tabletop exercises for your engineers and leaders.', b:'Details: secure SDLC (threat modeling, code review, dependency and secrets hygiene, CI checks), secure AI development lifecycle (prompt injection, agent permissions, data handling, evals and red-teaming), tabletop exercises (incident response, breaches, AI incidents), tailored to your stack with hands-on labs.', w:''}
 ]},
 {id:'how', title:'How we make a difference', lead:'', items:[
  {id:'d1', t:'We keep your speed', p:'We fit into how your engineers already work, so security does not become the reason a release slips.', b:'', w:''},
  {id:'d2', t:'Direct communication', p:'You talk to the people doing the work. Short updates, clear priorities, no 80-page decks.', b:'', w:''},
- {id:'d3', t:'Hands-on through the fix', p:'We do not stop at the report. We help remediate, retest, and collect the evidence.', b:'', w:''}
+ {id:'d3', t:'We close the loop', p:'Finding issues is the easy part. Findings come with fixes, verification, and retesting, not a PDF.', b:'', w:''},
+ {id:'d4', t:'Built for how you ship', p:'Testing and retesting on a cadence that matches your releases, not once a year.', b:'', w:''}
 ]},
 {id:'products', title:'Products (NEW rotating carousel)', lead:'Rotates every 7 seconds, pauses on hover. Slides 2 and 3 are my draft copy.', items:[
  {id:'pr-kavach', t:'Kavach (Open source)', p:'Containment for AI agents. The agent only ever sees tokens and stand-in keys, a gateway enforces an allowlist and swaps in real secrets only where allowed, and every request is traced.', b:'Buttons: Visit Kavach, View on GitHub.', w:''},
- {id:'pr-asm', t:'Attack Surface Management', p:'See what you expose to the internet: hosts and services, certificates, DNS, and leaked credentials. Continuous monitoring behind the free attack surface review.', b:'Button: Ask about it (email).', w:''},
- {id:'pr-pen', t:'AI Pentesting Agent', p:'AI agents that test applications, infrastructure, and mobile for breadth, with our engineers validating every finding before you see it.', b:'Button: Ask about it (email).', w:''}
+ {id:'pr-asm', t:'Attack Surface and Exposure Management', p:'See what you expose to the internet: hosts and services, certificates, DNS, and leaked credentials. Continuous monitoring behind the free attack surface review.', b:'Button: Ask about it (email).', w:''},
+ {id:'pr-pen', t:'AI Pentesting Agent', p:'AI agents that test applications, infrastructure, and mobile for breadth, with our engineers validating every finding before you see it. Built to rerun as you ship.', b:'Button: Ask about it (email).', w:''}
 ]},
 {id:'free', title:'Free security reviews', lead:'Each "Request it" button opens an email to info@lib13.com.', items:[
  {id:'f1', t:'Attack surface review', p:'Give us your domain. We map exposed hosts and services, expired certificates, risky DNS, and leaked credentials, and send a one-page report with the first fixes.', b:'', w:''},
  {id:'f2', t:'Email authentication check', p:'SPF, DKIM, and DMARC reviewed, with the exact record changes to stop spoofing.', b:'', w:''},
  {id:'f3', t:'SOC 2 and HIPAA readiness scorecard', p:'A short questionnaire. You get your likely gaps and a rough timeline. An estimate, not an audit.', b:'', w:''},
- {id:'f4', t:'AI security quick check', p:'30 minutes on your AI product. We name your top three risks and send a short written summary.', b:'', w:''}
+ {id:'f4', t:'AI security quick check', p:'30 minutes on your AI product and agents: what runs, who owns it, what it can reach. We name your top three risks and send a short written summary.', b:'', w:''}
 ]},
 {id:'inv', title:'For investors', lead:'', items:[
  {id:'i1', t:'Security diligence and support for your portfolio', p:'One baseline for every portfolio company: an attack surface review, SOC 2 readiness help, and fast answers when a customer sends a security questionnaire. Bundled per-company pricing.', b:'', w:''}
@@ -108,7 +109,7 @@ var QUESTIONS = [
  {id:'q3', q:'Team: handles/LinkedIn links for Brian and Drew, and the updated subhead?'},
  {id:'q4', q:'Ready to commit and ship to production, or another round first?'}
 ];
-var KEY = 'lib13-review-v7', state = {};
+var KEY = 'lib13-review-v8', state = {};
 try { state = JSON.parse(localStorage.getItem(KEY) || '{}'); } catch (e) {}
 function save(){ try { localStorage.setItem(KEY, JSON.stringify(state)); } catch (e) {} }
 function el(tag, cls, html){ var n = document.createElement(tag); if (cls) n.className = cls; if (html != null) n.innerHTML = html; return n; }
