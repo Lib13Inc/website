@@ -97,10 +97,11 @@ var SECTIONS = [
  {id:'p3', t:'Clients row', p:'Jasper, StarTree, plus the older logos.', b:'', w:''}
 ]},
 {id:'team', title:'Team (6 people)', lead:'', items:[
- {id:'t1', t:'Existing four', p:'Vaibhav Bhandari (Security Engineering), Varun Almaula (Growth), Srikumar R (Scientist), Alison Depsky (Design).', b:'', w:''},
+ {id:'t1', t:'Existing four', p:'Vaibhav Bhandari (Security Engineering), Varun Almaula (Growth), Srikumar R (AI Researcher), Alison Depsky (Design).', b:'', w:''},
  {id:'t2', t:'Brian Koref', p:'Risk Management', b:'', w:''},
  {id:'t3', t:'Drew Gipson', p:'Cloud Automation', b:'No Twitter/LinkedIn link yet.', w:''},
- {id:'t4', t:'Team subhead', p:'We are a proven team of engineers and researchers with previous experience at Microsoft, INRIA, Mitsubishi and Y-Combinator.', b:'Still accurate with the new members?', w:''}
+ {id:'t4', t:'Evgeny Roubinchtein', p:'Remediation Engineer', b:'No Twitter/LinkedIn link yet.', w:''},
+ {id:'t5', t:'Team subhead', p:'We are a proven team of engineers and researchers with previous experience at Microsoft, INRIA, Mitsubishi and Y-Combinator.', b:'Still accurate with the new members?', w:''}
 ]}
 ];
 var QUESTIONS = [
@@ -109,7 +110,7 @@ var QUESTIONS = [
  {id:'q3', q:'Team: handles/LinkedIn links for Brian and Drew, and the updated subhead?'},
  {id:'q4', q:'Ready to commit and ship to production, or another round first?'}
 ];
-var KEY = 'lib13-review-v8', state = {};
+var KEY = 'lib13-review-v10', state = {};
 try { state = JSON.parse(localStorage.getItem(KEY) || '{}'); } catch (e) {}
 function save(){ try { localStorage.setItem(KEY, JSON.stringify(state)); } catch (e) {} }
 function el(tag, cls, html){ var n = document.createElement(tag); if (cls) n.className = cls; if (html != null) n.innerHTML = html; return n; }
